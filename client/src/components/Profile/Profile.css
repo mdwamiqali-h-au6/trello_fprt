@@ -1,0 +1,42 @@
+.spacing{
+    padding: 20px 20px;
+    box-shadow: 0px 5px 9.9px 0.1px rgba(0, 0, 0, 0.5) !important;
+}
+
+.jumbotron{
+    background-color:#e7f0fd;
+}
+
+.profile-content{
+    padding: 40px 180px 32px 10px;
+    position: relative;
+    z-index: 99; 
+}
+
+.profile-picture{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-right: 4px;
+    margin-top: 16px;
+    position: absolute;
+    top: 30px;
+    right: 0;
+}
+
+.pic{
+    border-radius: 300px !important;
+    height: auto;
+    width: 120px;
+}
+
+@media screen and (max-width: 880px) {
+    .profile-picture {
+      display: none;
+    }
+    .profile-content{
+        padding: 0px 10px 20px 0px;
+        position: relative;
+        z-index: 99; 
+    }
+  }

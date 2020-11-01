@@ -1,0 +1,15 @@
+.myconatiner{
+    display:flex;
+    margin-left: auto;
+    margin-right:auto;
+    margin-top:20px;
+    width: 80%;
+}
+
+.sidebar{
+    flex: 0.3;
+}
+
+.boards{
+    flex: 0.9;
+}

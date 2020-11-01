@@ -1,0 +1,56 @@
+.customer-container{
+    display:flex;
+    margin-left: auto;
+    margin-right:auto;
+    margin-top:20px;
+    width: 80%;
+    height: auto;
+}
+
+.todoCus{
+    flex: 0.4;
+    background-color: #ebecf0;
+    padding: 20px;
+    margin-left: 10px;
+    border-radius: 5px;
+    height: fit-content;
+}
+
+.todolist{
+    padding: 5px;
+}
+
+.todolist-item{
+    border-radius: 5px;
+    height: 5vh;
+    box-shadow: 0 10px 10px 0px rgba(0, 0, 0, 0) !important;
+}
+
+.in-progress{
+    flex: 0.4;
+    background-color: #ebecf0;
+    padding: 20px;
+    margin-left: 10px;
+    border-radius: 5px;
+    height: fit-content;
+}
+
+.in-progress-list{
+    padding: 5px;
+}
+
+.in-progress-list-item{
+    border-radius: 5px;
+    height: 5vh;
+    box-shadow: 0 10px 10px 0px rgba(0, 0, 0, 0) !important;
+}
+
+.completedCus{
+    flex: 0.4;
+    background-color: #ebecf0;
+    padding: 20px;
+    margin-left: 10px;
+    border-radius: 5px;
+    height: fit-content;
+}
+
