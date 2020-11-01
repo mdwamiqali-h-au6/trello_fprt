@@ -1,7 +1,8 @@
 require("dotenv").config();
 const mongoose = require("mongoose");
 
-const uri = process.env.MONGODB_URI || "mongodb://localhost/trello";
+
+const uri =  "mongodb+srv://Wamiq:dbconnect@cluster0.mlsth.mongodb.net/trello?retryWrites=true&w=majority"  || "mongodb://localhost/trello";
 
 mongoose.connect(uri, {
   useNewUrlParser: true,
