@@ -1,21 +1,6 @@
 {
-  "name": "trello_fprt",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
   "scripts": {
     "build": "sh ./build.sh",
-    "start": "cd server && node app.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/mdwamiqali-h-au6/trello_fprt.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/mdwamiqali-h-au6/trello_fprt/issues"
-  },
-  "homepage": "https://github.com/mdwamiqali-h-au6/trello_fprt#readme"
+    "start": "cd server && node ./src/index.js"
+  }
 }

@@ -1,25 +1,45 @@
-import React from 'react';
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+import React from "react";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 
-import Signup from './components/signup/Signup';
-import Login from './components/Login/Login';
-import Navbar from './components/Navbar/Navbar';
-import Profile from './components/Profile/Profile';
-import Homepage from './components/Pages/Homepage/Homepage';
-import TaskPage from './components/Pages/TaskPage/TaskPage';
+import Navbar from "./components/layout/Navbar";
+import Home from "./components/pages/Home";
+import About from "./components/pages/About";
+import Login from "./components/auth/Login";
+import ListsHome from "./components/list/ListsHome";
+import Register from "./components/auth/Register";
+import Alerts from "./components/layout/Alerts";
+import PrivateRoute from "./components/routing/PrivateRoute";
+
+import AuthState from "./context/auth/AuthState";
+import AlertState from "./context/alert/AlertState";
+
+import setAuthToken from "./utils/setAuthToken";
+
+import "./App.css";
+
+if (localStorage.token) {
+  setAuthToken(localStorage.token);
+}
 
 function App() {
   return (
-    <Router>
-      <Navbar/>
-      <Switch>
-        <Route path="/signup" exact component={Signup}/>
-        <Route path="/login" exact component={Login}/>
-        <Route path="/" exact component={Homepage}/>
-        <Route path="/profile" exact component={Profile}/>
-        <Route path="/task-details" exact component={TaskPage}/>
-      </Switch>
-    </Router>
+    <>
+      <AuthState>
+        <AlertState>
+          <BrowserRouter>
+            <Navbar />
+            <Alerts />
+            <Switch>
+              <PrivateRoute exact path="/" component={Home} />
+              <Route exact path="/About" component={About} />
+              <Route exact path="/login" component={Login} />
+              <Route exact path="/register" component={Register} />
+              <Route exact path="/board/:boardId" component={ListsHome} />
+            </Switch>
+          </BrowserRouter>
+        </AlertState>
+      </AuthState>
+    </>
   );
 }
 
